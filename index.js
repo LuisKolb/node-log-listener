@@ -2,6 +2,9 @@ var express = require("express"),
     fs = require("fs"),
     url = require("url");
 var app = express();
+var cors = require('cors')
+
+app.use(cors())
 
 app.use("/logs", express.static(__dirname + "/logs"));
 app.use(express.static(__dirname + "/logs"));
