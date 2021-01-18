@@ -27,6 +27,7 @@ app.post("/receive-*", function (request, respond) {
                 fs.writeFileSync(filePath, JSON.stringify(newBody), (err) => {
                     if (err) console.log(err);
                 });
+                console.info("new logfile created for " + userHash);
             }
 
             fs.readFile(filePath, (err, data) => {
